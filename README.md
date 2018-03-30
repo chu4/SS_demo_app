@@ -1,24 +1,17 @@
-# README
+**Welcome to SS demo app!**
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Application created for the purpose of studying
 
-Things you may want to cover:
+## To run application you need:
+* Ruby `v.2.4.1`
+* PostgreSQL
+* sphinxsearch
 
-* Ruby version
+## Installation
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+* Run `git clone`
+* Run `bundle`
+* Run `rails db:create`
+* Run `rails db:migrate`
+* Run `rails db:seed`
+* Run `rails s`

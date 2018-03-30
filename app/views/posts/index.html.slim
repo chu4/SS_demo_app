@@ -1,0 +1,29 @@
+h1 Listing posts
+
+= form_for posts_path, method: :get do |f|
+  .input-group.mb-3
+    = text_field_tag :query, params[:query], placeholder: 'Search posts', class: 'form-control'
+    .input-group-append
+      = submit_tag 'Search', class: 'btn btn-dark'
+
+table
+  thead
+    tr
+      th Title
+      th Description
+      th
+      th
+      th
+
+  tbody
+    - @posts.each do |post|
+      tr
+        td = post.title
+        td = post.description
+        td = link_to 'Show', post
+        td = link_to 'Edit', edit_post_path(post)
+        td = link_to 'Destroy', post, data: { confirm: 'Are you sure?' }, method: :delete
+
+br
+
+= link_to 'New Post', new_post_path

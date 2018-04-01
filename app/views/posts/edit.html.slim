@@ -1,3 +1,8 @@
+=content_for :breadcrumbs do
+  li= link_to 'All Posts', posts_path
+  li= link_to "#{@post.title}", posts_path(@post)
+  li= "Edit #{@post.title}"
+
 h1 Editing post
 
 == render 'form'

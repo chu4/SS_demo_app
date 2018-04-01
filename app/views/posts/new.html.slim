@@ -1,3 +1,7 @@
+=content_for :breadcrumbs do
+  li= link_to 'All Posts', posts_path
+  li Create New
+
 h1 New post
 
 == render 'form'

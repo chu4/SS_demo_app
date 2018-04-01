@@ -1,3 +1,6 @@
+=content_for :breadcrumbs do
+  li All Posts
+
 h1 Listing posts
 
 = form_for posts_path, method: :get do |f|
@@ -5,6 +8,8 @@ h1 Listing posts
     = text_field_tag :query, params[:query], placeholder: 'Search posts', class: 'form-control'
     .input-group-append
       = submit_tag 'Search', class: 'btn btn-dark'
+
+= link_to 'New Post', new_post_path
 
 table
   thead
